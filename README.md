@@ -170,20 +170,13 @@ that takes a string as input and returns the first non-repeated (unique)
 character in the input string. If there are no unique characters return
 None. Note: Your code should be in Python.
 
-```
-def first_unique(string):
-    # Your code here
-    return unique_char
-
-> first_unique('aabbcdd123')
-> c
-
-> first_unique('a')
-> a
-
-> first_unique('112233')
-> None
-```
+The solution bellow work as intended. Is somehow verbose but it accounts
+for all possible cases presented. Since I am using dictionaries, it has
+a constant look-up time. I only need to go through the array twice. Once
+when I am building the dict and a second time choosing which element of 
+the dict to return, if any. This means the complexity of my algorith is 
+of O(2N). I could have done this with nested for loops, but that would
+mean complexity of O(N^2) which is much worst.
 
 ```python
 def first_unique(string):
@@ -197,49 +190,36 @@ def first_unique(string):
                     letter[char] = [1,index]
                 else:
                     letter[char] = [letter[char][0]+1,index]
-            print(letter)
 
+            for key,value in letter.items():
+                if value[0] == 1:
+                    return key
+		else:
+		    return None
     else:
         return None
 
 
-
-
-
 print(first_unique('aabbcdd123'))
+print(first_unique('112233'))
+print(first_unique('a'))
 ```
-
-```python
-def first_unique(string):
-    seen = set([])
-    for i in range(len(string)):
-        letter = string[i]
-        if letter not in seen and letter not in string[i+1:]:
-            return letter
-        seen.add(letter)
-    return None
-
-```
-
-This solution is short to code and easy to understand. However,
-complexity is O(N^2), since we are doing the look-ahead through the 
-string for every letter, slightly mitigating it by the `seen` check.
-It may be more efficient to:
-
-* create a dict of `letter: (count, index)`: O(N)
-* loop through the dict and find key with count=1 and minimal index: O(N)
-
-Here, complexity would be O(2*N).
 
 ### Question 5 - What are underfitting and overfitting
 
 in the context of Machine Learning? How might you balance them?
 
-Underfitting is the situation when the model does not capture the trend in
-data well, i.e. even on training set, performance is not good. Overfitting
-is when the model shows good results on training set, but poor results on 
-new data. Validation and cross-validation of the model are the usual ways
-to fix it.
+Overfitting happens when a model learns the detail and noise in the 
+training data to the extent that it negatively impacts the performance
+of the model on new data. This means that the noise or random fluctuations
+in the training data is picked up and learned as concepts by the model.
+Underfitting refers to a model that can neither model the training data 
+nor generalize to new data. An underfit machine learning model is not a
+suitable model and will be obvious as it will have poor performance 
+on the training data.
+Ideally we will want a sweet spot between underfitting and overfitting.
+So you want the machine to learn the traning set rather well, but not too
+much that it will not be able to adapt to new sets positevely. 
 
 Possible causes of underfitting:
 

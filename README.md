@@ -32,28 +32,33 @@ four pieces in a row, what is the probability that the first two pieces
 you eat have an orange cream filling and the last two have a coconut
 filling?
 
-Great way to answer this question is using a tree diagram. 
+Great way to answer this question is using a tree diagram.
+
 Let's call P(A) the probability of occurring the event in question. 
 P(O) is the probability of eating a Orange filling and P(C) a coconut filling.
+
 We only have one type of event order that matters. Which is:
-	P(O) -> P(O) -> P(C) -> P(C)
+```
+P(O) -> P(O) -> P(C) -> P(C)
+```
+	
 On the first chocolate we have P(O) = 6/10, 2nd is 5/9. Then P(C) is 4/8=½
-and then 3/7. All this probabilities are independent so we can 
-just calculate P(A) = 6/10 x 5/9 x ½ x 3/7 = 1/14 = 0.0714 or 7%
+and then 3/7. The following table resumes the information:
 
 
- Ate    | Probability | O left | C left 
---------|-------------|------------|-------------
- -      |      -      | 6          | 4
- O      | 6/10        | 5          | 4
- O      | 5/9         | 4          | 4
- C      | 1/2         | 4          | 3
- C      | 3/7         | 4          | 2
+| Ate    | Probability | O left | C left |
+|--------|-------------|------------|-------------
+| -      |      -      | 6          | 4	|
+| O      | 6/10        | 5          | 4	|	
+| O      | 5/9         | 4          | 4	|
+| C      | 1/2         | 4          | 3	|
+| C      | 3/7         | 4          | 2	|
  
-Total:
+All this probabilities are independent so we can 
+just calculate the total as:
 
 ```
-0.6 * 5/9 * 0.5 * 3/7 = 0.07
+P(A) = 6/10 x 5/9 x ½ x 3/7 = 1/14 = 0.0714 or 7%
 ```
 
 ### Follow up question:
@@ -65,12 +70,14 @@ coconut filling?
 There are 6 different possible order of events that allow us to eat exactly 2
 Coconut chocolates. These are:
 
+```
 C C O O
 O C C O
 O O C C
 C O O C
 C O C O
 O C O C
+```
 
 It is possible to calculate the probabilite of each individual event,
 and then add them up in the end. The following python code achieves
@@ -194,8 +201,7 @@ def first_unique(string):
             for key,value in letter.items():
                 if value[0] == 1:
                     return key
-		else:
-		    return None
+		
     else:
         return None
 
@@ -203,6 +209,14 @@ def first_unique(string):
 print(first_unique('aabbcdd123'))
 print(first_unique('112233'))
 print(first_unique('a'))
+```
+The output of it will be:
+
+```
+> python first_unique.py
+c
+a
+None
 ```
 
 ### Question 5 - What are underfitting and overfitting
@@ -242,66 +256,45 @@ Your answer for Question 6 should be targeted to the company/job-description you
 
 what would be your goals a year from now?
 
-Job description (http://www.parsely.com/jobs/#software_engineer):
+
 
 ```
-Software Engineer
+Junior Python Developer
 
-We are hiring a software engineer to work on our real-time analytics 
-dashboard. Pythonistas and JavaScript hackers especially desired.
+Are you an up and coming Python or Golang Developer?
 
-Our analytics platform helps digital storytellers at some of the web's 
-best sites, such as Arstechnica, New Yorker, Mashable, The Next Web, 
-and many more. In total, our analytics backend system needs to 
-handle over 50 billion monthly events from over 475 million monthly 
-unique visitors.
+Do you enjoy building complex algorithms and storing huge amounts of data? If so, please read on!
 
-We are currently looking for software engineers to help us build the 
-best real-time analytics dashboard the world has ever seen. The only 
-requirement is some experience in Python/JavaScript. Bonus points for 
-an interest in information visualization, Edward Tufte, and d3.js. 
-To see an example of how we work, check out the blog post, "Whatever It Takes".
+Based in the heart of Orange County, Irvine, just a few steps from all the action, next to great shopping and dining, We are a high growth Cloud Technology / Content Streaming and Distribution company that enables users to access content, data, and services in real-time!
 
-Responsibilities
-
-Write code using the best practices.
-Analyze data at massive scale.
-Brainstorm new product ideas and directions with team and customers.
-Master cloud technologies and systems.
-Learn, grow, and succeed in your career.
-
-Requirements
-
-Ideally 2-3 years experience in technology, but no minimum experience required.
-Self-sufficient, but works well with others.
-Highly organized and disciplined about self-improvement.
-Open source contributions and publicly scrutable code available.
-Some background in Python and/or JavaScript.
+We are currently seeking a talented junior - mid Software Engineer with strong Python skills who can help develop solutions for our cloud services to support our growth as we sign up new customers and add millions of users.
+Top Reasons to Work with Us
+1. Custom work set - build your dream computer, tools or hardware setup
+2. Exceptional benefits and flexible paid time off
+3. Opportunity to see your ideals turn into code
+What You Will Be Doing
+- Creating tools and solving challenges related to scaling and accommodating millions of users
+- Developing network side tools to accommodate and handle load, improve performance
+- Building cloud technologies and improving performance
+What You Need for this Position
+- Understanding of Python and good knowledge of various Python Libraries, API's and toolkits
+- Must be able to work with adult content. You will have limited exposure
+- 1+ years of professional experience
+- Know how to scale.
+- Working knowledge of SQL
+What's In It for You
+- Strong Base Salary ($80,000 - $110,000 DOE)
+- 401k Matching and Bonus!
+- Projected company growth of over 10 times in the next 2-3 Years
+- A new product that is revolutionizing distribution of high-demand content
+- Solve challenging problems for a platform that is already serving a growing user base.
 
 ```
+A year from now I would like to be a Mid Senior Python Developer that builds his own tools
+to develop big data analysis for large companies. I would like to be designing algorithms 
+and prediction models. Eventually moving into Machine Learning and Deep Learning domains
+using that knowledge to develop better methods to extract and analyse data. I want to be able
+to build any sort of web app with a Python back-end. I would like to be a project manager
+for some project within the company, where I would have a team to lead.
 
-(I got this job description from my current company jobs page, because
-right now I'm happy with my job).
 
-A year from now, I'd like to:
-
-1. Be able to efficiently use Apache Spark and Apache Storm in my work.
-
-How I might achieve that:
-
-* Learn from existing code.
-* Use technical documentation.
-* Ask questions from more experienced team members.
-
-Those two systems are the foundation of our current data processing
-pipeline. We make it work, but problems still come up, and currently
-we spend about 20% of development time (1 day every week) on fixing
-customer issues that could be prevented if we increased stability and
-reliability of the system. I would call it a win if we could cut this
-time in half and only need to have a "bug day" once every two weeks.
-
-2. Become an expert in monitoring tools and create a single dashboard
-that we can use to diagnose problems arising during the daily data
-processing tasks. Use it to determine the bottlenecks and parts of the
-pipeline that have problems most often, and potentially would prevent
-us from scaling the system to support more events.

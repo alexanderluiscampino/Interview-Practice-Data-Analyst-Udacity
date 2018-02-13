@@ -1,4 +1,4 @@
-# P7: Interview Practice - Data Analyst - Udacity
+# Interview Practice - Data Analyst - Udacity
 This readme file will serve to answer the Project Submission for the 
 interview Practice of Udacity's Data Analyst Nanodegree.  
 

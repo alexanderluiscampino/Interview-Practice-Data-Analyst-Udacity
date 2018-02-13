@@ -22,6 +22,13 @@ organized in a neat way which allows the company to draw conclusions and plan
 events better. All this work has already given fruits, since we reduced our
 wasted materials billing in 30%. Also we have steadily been increasing our
 revenue each month, by 5%, due to the models that are now in place.
+With this project I have learned quite in depth exactly what it is to be a 
+data analyst. I have gone through all the phases of the project successfuly.
+This project has been trully amazing and inpiring because it is very challenging. 
+I have learned to use Python daily and all the routines to programatically
+solve issues that manually would take countless hours. I have obtained professional
+knowledge on how gather all the information of a database and produce a meaningful
+outcome from it, that can be used to fulfill the company's goals.
 
 
 ### Question 2 - You are given a ten piece box of chocolate truffles.
@@ -135,6 +142,7 @@ Here is the output:
 - OCOC: 0.0714285714286
 Result 0.428571428571
 ```
+Of course this uoutput is expected, each individual probability is the same as the one above. This is because these are independent events, so the order you eat the chocolates does not matter, as long as you eat 2 of the Coconut filling.
 
 ### Question 3 - Given the table users:
 
@@ -177,12 +185,17 @@ that takes a string as input and returns the first non-repeated (unique)
 character in the input string. If there are no unique characters return
 None. Note: Your code should be in Python.
 
-The solution bellow work as intended. Is somehow verbose but it accounts
+The solution bellow work as intended. It is somehow verbose but it accounts
 for all possible cases presented. Since I am using dictionaries, it has
 a constant look-up time. I only need to go through the array twice. Once
 when I am building the dict and a second time choosing which element of 
 the dict to return, if any. This means the complexity of my algorith is 
-of O(2N). I could have done this with nested for loops, but that would
+of O(2N). The complexity should be less than O(2N) because we can only 
+have as many keys in the dict, as we have symbols. If we only consider 
+the alphabet this would be 26 keys max. So on my second iteration thorough
+the keys, it would be of very reduced complexity in time and space. A very
+long string would cause some complexity in saving the large indexes and count.
+I could have done this with nested for loops, but that would
 mean complexity of O(N^2) which is much worst.
 
 ```python
@@ -296,5 +309,15 @@ and prediction models. Eventually moving into Machine Learning and Deep Learning
 using that knowledge to develop better methods to extract and analyse data. I want to be able
 to build any sort of web app with a Python back-end. I would like to be a project manager
 for some project within the company, where I would have a team to lead.
+
+The work I am currently working on will serve as basis for the position I am applying for.
+I have been working with Python for the last 2 years, creating tools to analyse millions of
+observation points of data. Using these tools to nuild prediction models for future events
+and increase company's profits. the tools I have created are ready to handle heavy loads and 
+future expansion of users. They store data on the cloud and not locally, in case of a security
+breach or other case of accident, information is not sunddenly lost.
+
+I am defintely looking forward to turn my ideas into code and produce results with it. Further 
+enrich my knowledge of Python and data analysis it is big plus with this position
 
 

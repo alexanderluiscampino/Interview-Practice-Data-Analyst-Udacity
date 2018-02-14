@@ -29,6 +29,11 @@ I have learned to use Python daily and all the routines to programatically
 solve issues that manually would take countless hours. I have obtained professional
 knowledge on how gather all the information of a database and produce a meaningful
 outcome from it, that can be used to fulfill the company's goals.
+All these skills can be used on my new position at the company. I can use my
+knowledge of building Python applications to develop tools that will solve problems
+related to scalability and accomodating millions of users. Database skills acquired
+will be used to help network tools to handle future loads and improve performance.
+
 
 
 ### Question 2 - You are given a ten piece box of chocolate truffles.
